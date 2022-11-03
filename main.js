@@ -35,9 +35,11 @@ function scomparireNumeroRandom(){
 let rispostaUtente = setTimeout (chiediNumeri, 6000);
 
 // funzione che chiede prompt per far inserire numeri all'utente 5 volte
+
+var arrayUtente = [];
+console.log(arrayUtente)
+
 function chiediNumeri(){
-    var arrayUtente = [];
-    console.log(arrayUtente)
 
     for(let y=0 ; y<5 ; y++){
         var richiesta = parseInt(prompt('Quali erano i numeri presenti nella pagina?'));
@@ -47,11 +49,14 @@ function chiediNumeri(){
 
 
 
-for( y=0; y<5 ; y++){
-    if(arrayUtente.includes(numeroRandom)){
-        console.log('ottimo, il numero che hai scelto è il numero giusto') 
+let controllo = setTimeout (controlloNumeri, 8000);
+
+function controlloNumeri(){
+    for( let y=0; y<5 ; y++){
+        if(arrayUtente.includes(numeroRandom)){
+            console.log('ottimo, il numero che hai scelto è il numero giusto') 
+        }
+        else(!arrayUtente.includes(numeroRandom))
+            console.log('sbagliato, il numero che hai scelto non è il numero giusto')
+        }
     }
-    else{
-        console.log('sbagliato, il numero che hai scelto non è il numero giusto')
-    }
-}
