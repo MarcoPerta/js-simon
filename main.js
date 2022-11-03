@@ -37,10 +37,11 @@ let rispostaUtente = setTimeout (chiediNumeri, 6000);
 // funzione che chiede prompt per far inserire numeri all'utente 5 volte
 function chiediNumeri(){
     var arrayUtente = [];
+    console.log(arrayUtente)
 
     for(let y=0 ; y<5 ; y++){
         let richiesta = parseInt(prompt('Quali erano i numeri presenti nella pagina?'));
-        arrayUtente.push(prompt);
+        arrayUtente.push(richiesta);
     }
 }
 
