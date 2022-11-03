@@ -40,30 +40,18 @@ function chiediNumeri(){
     console.log(arrayUtente)
 
     for(let y=0 ; y<5 ; y++){
-        let richiesta = parseInt(prompt('Quali erano i numeri presenti nella pagina?'));
+        var richiesta = parseInt(prompt('Quali erano i numeri presenti nella pagina?'));
         arrayUtente.push(richiesta);
     }
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-// for( y=0; y<5 ; y++){
-//     if(numero utente= numerorandom){
-//         div.innertext = 'ottimo, il numero che hai scelto è il numero giusto'
-//     }
-//     else{
-//         div.innertext = 'sbagliato, il numero che hai scelto: ${numeroutente} non è il numero giusto'
-//     }
-// }
+for( y=0; y<5 ; y++){
+    if(arrayUtente.includes(numeroRandom)){
+        console.log('ottimo, il numero che hai scelto è il numero giusto') 
+    }
+    else{
+        console.log('sbagliato, il numero che hai scelto non è il numero giusto')
+    }
+}
