@@ -17,7 +17,7 @@ function get5Random(max,min){
 get5Random(100,1)
 
 // ciclo per immettere 5 num random nell'array e stamparli nell'html
-for( x=0; x<5; x++){
+for( let x=0; x<5; x++){
     numeroRandom = get5Random(100,1);
     array.push(numeroRandom);
     numeriNellHtml.innerHTML += `${numeroRandom}  `;
@@ -31,16 +31,38 @@ function scomparireNumeroRandom(){
     document.getElementById("numeriArray").style.display = "none";
 }
 
-    for( y=0; y<5 ; y++){
-        parseInt(prompt('Quali erano i 5 numeri nella pagina?'));
+// variabile per chiedere prompt dopo scomparsa numeri
+let rispostaUtente = setTimeout (chiediNumeri, 6000);
+
+// funzione che chiede prompt per far inserire numeri all'utente 5 volte
+function chiediNumeri(){
+    var arrayUtente = [];
+
+    for(let y=0 ; y<5 ; y++){
+        let richiesta = parseInt(prompt('Quali erano i numeri presenti nella pagina?'));
+        arrayUtente.push(prompt);
     }
+}
 
-// let prompt = setTimeout (chiediNumeri, 6000);
 
-// function chiediNumeri(){
 
-//     for( y=0; y<5 ; y++){
-//         parseInt(prompt('Quali erano i 5 numeri nella pagina?'));
+
+
+
+
+
+
+
+
+
+
+
+
+// for( y=0; y<5 ; y++){
+//     if(numero utente= numerorandom){
+//         div.innertext = 'ottimo, il numero che hai scelto è il numero giusto'
+//     }
+//     else{
+//         div.innertext = 'sbagliato, il numero che hai scelto: ${numeroutente} non è il numero giusto'
 //     }
 // }
-
