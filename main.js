@@ -20,5 +20,27 @@ get5Random(100,1)
 for( x=0; x<5; x++){
     numeroRandom = get5Random(100,1);
     array.push(numeroRandom);
-    numeriNellHtml.innerHTML += `${numeroRandom}`;
+    numeriNellHtml.innerHTML += `${numeroRandom}  `;
 }
+
+// variabile per far scomparire i numeri dopo 5s
+let scomparire = setTimeout (scomparireNumeroRandom, 5000);
+
+// funzione all'interno della variabile JS Timing che ha lo scopo di far scomparire i numeri nell HTML
+function scomparireNumeroRandom(){
+    document.getElementById("numeriArray").style.display = "none";
+}
+
+    for( y=0; y<5 ; y++){
+        parseInt(prompt('Quali erano i 5 numeri nella pagina?'));
+    }
+
+// let prompt = setTimeout (chiediNumeri, 6000);
+
+// function chiediNumeri(){
+
+//     for( y=0; y<5 ; y++){
+//         parseInt(prompt('Quali erano i 5 numeri nella pagina?'));
+//     }
+// }
+
