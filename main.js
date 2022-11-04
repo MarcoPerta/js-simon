@@ -9,6 +9,8 @@ console.log(array)
 let numeroRandom;
 // variabile per scrivere numeri array nell'html
 let numeriNellHtml = document.getElementById('numeriArray');
+// variabile per scrivere risultato array nell'html
+let risultato = document.getElementById('risultato');
 
 // funzione per generare numeri random
 function get5Random(max,min){
@@ -43,20 +45,16 @@ function chiediNumeri(){
 
     for(let y=0 ; y<5 ; y++){
         var richiesta = parseInt(prompt('Quali erano i numeri presenti nella pagina?'));
-        arrayUtente.push(richiesta);
+
+        if (array.includes(arrayUtente)){
+          arrayUtente.push(richiesta);
+        }
     }
+    document.getElementById("numeriArray").style.display = "block";
+    risultato.innerHTML = `il tuo punteggio è di ${arrayUtente.length}`;
+    console.log('i numeri giusti sono :' , arrayUtente)
 }
 
 
 
-let controllo = setTimeout (controlloNumeri, 8000);
 
-function controlloNumeri(){
-    for( let y=0; y<5 ; y++){
-        if(arrayUtente.includes(numeroRandom)){
-            console.log('ottimo, il numero che hai scelto è il numero giusto') 
-        }
-        else(!arrayUtente.includes(numeroRandom))
-            console.log('sbagliato, il numero che hai scelto non è il numero giusto')
-        }
-    }
