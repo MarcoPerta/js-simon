@@ -46,7 +46,7 @@ function chiediNumeri(){
     for(let y=0 ; y<5 ; y++){
         var richiesta = parseInt(prompt('Quali erano i numeri presenti nella pagina?'));
 
-        if (array.includes(arrayUtente)){
+        if (array.includes(richiesta)){
           arrayUtente.push(richiesta);
         }
     }
